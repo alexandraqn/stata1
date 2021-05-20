@@ -22,7 +22,7 @@ save "./data/OWID_data.dta", replace
 ******Country Classification******
 
 copy "https://github.com/asjadnaqvi/COVID19-Stata-Tutorials/blob/master/master/country_codes.dta?raw=true" "./data/country_codes.dta", replace
-
+***********************
 clear all
 use "./data/OWID_data.dta", clear
 merge m:1 country using "./data/country_codes.dta"
@@ -85,9 +85,14 @@ graph export ./figures/scatter_deaths_cases.png, replace wid(1000)
 ! git commit -m 'my first upload'
 
 ! git remote add origin https://github.com/alexandraqn/stata1.git
+
 ! git push -u origin main
 
-
+!git remote add origin https://github.com/alexandraqn/stata1.git
+!git status
+!git add --all
+!git commit -m "minor fixes"
+!git push
 
 
 
